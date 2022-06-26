@@ -1,7 +1,4 @@
-<?
-include('../includes/header.php');
-encabezado();
-?>
+
 
 <?php
 function formulario()
@@ -18,8 +15,7 @@ function formulario()
      <?php
 
 
-function alerta_usuario($message)
-{
+function alerta_usuario($message){
     echo "<script>alert('$message');</script>";
 }
 
@@ -62,34 +58,30 @@ if (isset($_POST['enviar'])) {
             <form method="POST" action="../resultados/resultados.php"><br>
 
 <article class="menu-opciones">
- <a href="youtube.com">
+ <a href="/">
     <figure class="card">
      <img src="../../imgs/imc-menu.png" alt="imc">
-
       <figcaption>IMC</figcaption>
     </figure>
 </a>
 
-<a href="youtube.com">
+<a href="/">
     <figure class="card">
       <img src="../../imgs/glucosa.png" alt="glucosa">
       <figcaption>Glucosa</figcaption>
     </figure>
 </a>
-    <a href="youtube.com">
+    <a href="/">
     <figure class="card">
       <img src="../../imgs/presion.png" alt="presion">
       <figcaption>Presión Arterial</figcaption>
     </figure>
     </a>
 </article>
-
                 <br><br>
                 <a class="btn-cookie" href="../../../app/Controllers/Cookie/borrarCookie.php">Borrar Cookie</a>
                 <a class="btn-cookie" href="../inicio/borrar_contador.php">Reiniciar
                     Contador</a><br>
-
-
             </form>
 
             <div class="center">

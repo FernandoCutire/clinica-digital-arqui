@@ -6,7 +6,7 @@
   --black-color: #222;
   --white-font : #fff;
   --third-color: #002fff;
-  --hover-color: #;
+  /*--hover-color: #;*/
 
   --container-width: 1200px;
 }
@@ -88,7 +88,6 @@ video {
   cursor: pointer;
   background-color: #222;
   padding: 1rem;
-
 }
 
 
