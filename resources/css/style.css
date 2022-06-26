@@ -1,0 +1,438 @@
+/* **********     Reset CSS     ********** */
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: #2183b8;
+  --black-color: #222;
+  --white-font : #fff;
+  --third-color: #002fff;
+  --hover-color: #;
+
+  --container-width: 1200px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header {
+  /*position: sticky;*/
+  z-index: 2;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--white-font);
+
+}
+#personas-salud{
+  width: 300px;
+}
+.horoscopo{
+  left: 50px;
+  position: relative;
+  height: 120px;
+  width: 120px;
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 35px;
+}
+
+.section {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.menu-btn {
+  outline: thin solid var(--white-font);
+  border: 0;
+  cursor: pointer;
+  background-color: #222;
+  padding: 1rem;
+
+}
+
+
+
+.menu {
+  left: 0;
+  bottom: var(--header-height);
+  top: 0;
+  display: flex;
+  background-color: var(--main-color);
+  padding: 1rem;
+  position: static;
+  width: auto;
+  flex-direction: row;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.menu a {
+
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  text-align: center;
+  text-decoration: none;
+
+
+}
+
+.menu a:hover {
+
+  color: var(--white-color);
+  background-color: #222;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/*DIV DE ANUNCIO*/
+
+.anuncio{
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+
+  width: 50%;
+  max-width: var(--container-width);
+  min-height: auto;
+
+
+
+}
+
+
+
+/*SECTION DE FORMULARIO*/
+.formulario{
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;  
+
+}
+input[type=radio] {
+padding: 2rem;
+
+}
+
+.title-form{
+  font-weight: bold;
+  color: var(--third-color);
+
+}
+.menu-opciones{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}
+.menu-opciones a{
+  text-decoration: none;
+}
+.card{
+  background-color: var(--third-color);
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+.card img{
+  width: 70%;
+  height: auto;
+ 
+}
+
+.card figcaption{
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+.card:hover{
+  background-color: var(--main-color);
+}
+
+input[type=text],[type=password], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn-volver {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #5B369C;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.btn-cookie {
+  width: 17%;
+  padding: 10px 20px;
+  margin: 60px 2px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #5B369C;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+input .del, .sub{
+  width: 80px;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset]:hover {
+  background-color: #b71c1cc0;
+
+}
+
+
+.center{
+  text-align: center;
+}
+
+
+.sub{
+  width: 120px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: Arial, serif;
+  color: var(--white-font);
+  font-size: 1rem;
+  background: #1b5e20;
+  padding: 10px 20px 10px 20px;
+  border: solid #1b5e20 2px;
+  text-decoration: none;
+}
+.del{
+  width: 120px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: Arial;
+  color: var(--white-font);
+  font-size: 1rem;
+  background: #b71c1c;
+  padding: 10px 20px 10px 20px;
+  border: solid #b71c1c 2px;
+  text-decoration: none;
+
+}
+
+.nacimiento, .form-fecha{
+  height: 50px;
+  width: 120px;
+}
+
+option{
+  scroll-behavior: smooth;
+}
+label{
+  font-weight: bold;
+
+}
+
+/*CONTENIDO DE LA TABLA ZODIAC*/
+tr,td{
+  left: 50%;
+  text-align: center;
+  padding: 2rem;
+  text-orientation: 2rem;
+  border: #222;
+}
+
+
+
+.tabla-zodiac{
+
+  padding: 2rem;
+  text-align: center;
+  background-color: #888;
+  border-color: #222;
+  border-radius: 10px;
+}
+
+/*SECCION DE LAS RESPUESTAS*/
+
+.section_resultado {
+  margin-top: 3rem;
+  text-align: center;
+  border-color: #2222;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.persona{
+  text-transform: uppercase;
+  color: #222;
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+}
+
+.persona--desc{
+  color: #222;
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+}
+
+
+.parrafo-resp{
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+}
+.respuestas{
+padding: 1rem;
+  color: #941A38;
+}
+
+.title_result{
+  font-size: 1.4rem;
+  padding: 2rem;
+  background-color:  #941A38;
+  color: #fff;
+  border-radius: 20px;
+}
+
+/**FOOTER*/
+
+.footer {
+  width:100%;
+  padding: 2rem;
+  text-align: center;
+  color: var(--white-font);
+  background-color: var(--main-color);
+  margin-bottom: 0;
+}
+
+/*COOKIE*/
+.banderas {
+  width: 510px; /* Based on the width of all horizontal images plus their left and right margins */
+  margin: 0 auto;
+  
+ display: inline-block; 
+}
+
+.scroll-top-btn{ transition: all 0.3s ease-out;
+  position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(1vw + 4.25rem);
+    width: 4rem;
+    height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+ 
+ 
+}
+
+.scroll-top-btn:hover{
+background-color: var(--second-color);
+color: var(--main-color);
+
+
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+
+}
+/*****DARK THEME*******/
+
+.dark-mode-btn{
+  position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+   left: 1vw;
+    width: 4rem;
+    height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #454545;
+  
+  color: white;
+  cursor: pointer;
+ border-style: solid;
+  transition: all 0.3s ease-out;
+  
+  
+}
+
+.dark-mode-btn:hover{
+  background-color: yellow;
+  color: black;}
+
+.dark-mode{
+  background-color: #1C1E21;
+  color: white;
+}
+
