@@ -10,8 +10,12 @@ class Paciente
     private $lecturaHorario;
     private $presionSistolica;
     private $presionDistolica;
+    private $imc;
+    private $glucosa;
+    private $presionArterial;
 
     /**
+     *
      * @return mixed
      */
     public function getNombre()
@@ -138,6 +142,73 @@ class Paciente
     {
         $this->presionDistolica = $presionDistolica;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getImc()
+    {
+        return $this->imc;
+    }
+
+    /**
+     * @param mixed $imc
+     */
+    public function setImc($imc)
+    {
+        $this->imc = $imc;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGlucosa()
+    {
+        return $this->glucosa;
+    }
+
+    /**
+     * @param mixed $glucosa
+     */
+    public function setGlucosa($glucosa)
+    {
+        $this->glucosa = $glucosa;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPresionArterial()
+    {
+        return $this->presionArterial;
+    }
+
+    /**
+     * @param mixed $presionArterial
+     */
+    public function setPresionArterial($presionArterial)
+    {
+        $this->presionArterial = $presionArterial;
+    }
+
+
+    // Aqui deberian ir 3 funciones
+
+    public function calcularIMC()
+    {
+        $this->imc = $this->peso / ($this->estatura * $this->estatura);
+    }
+
+    public function calcularGlucosa()
+    {
+        $this->glucosa = $this->lecturaGlucometro * 18;
+    }
+
+    public function calcularPresionArterial()
+    {
+        $this->presionArterial = $this->presionSistolica + $this->presionDistolica;
+    }
+
 
 
 }

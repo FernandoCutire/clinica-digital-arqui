@@ -1,7 +1,7 @@
 
 <table align="center"><tr><td colspan="4" align="center" width="9999">
 
-# Horóscopo
+# Clínica Digital
 
 Código para el proyecto de Clínica digital
 
@@ -41,18 +41,32 @@ Recuerde que todos los procesos debe llevarlos a cabo en una clase.
 ### Sobre IMC
 Para la opción IMC el paciente debe proporcionar los siguientes datos peso(kg) y estatura (mts), tome en cuenta la siguiente tabla de valores:
 
+<p align="center">
+  <img src="resources/imgs/imc.png" alt="imc">
+</p>
+
+
 
 ### Sobre Glucosa
 En el caso de la glucosa en sangre, el paciente debe ingresar la lectura del glucómetro e indicar si se tomó la lectura en ayunas o posterior a las comidas (posprandial), utilice la siguiente tabla de valores para realizar el diagnóstico).
 
+<p align="center">
+  <img src="resources/imgs/glucosaSangre.png" alt="glucosa en la sangre">
+</p>
+
+
 ### Sobre Presión Arterial
 Para el caso de la presión arterial, el paciente debe proporcionar la lectura de la presión sistólica y diastólica, tome en cuenta la siguiente tabla de referencia para dar el diagnóstico al paciente
+<p align="center">
+  <img src="resources/imgs/presionArterial.png" alt="presión arterial">
+</p>
+
 
 ## Instalación
 
 Clona el repositorio
 ```bash
-git clone https://github.com/FernandoCutire/zodiaco-app
+git clone https://github.com/FernandoCutire/clinica-digital-arqui
 ```
 
 Coloca la carpeta en tu carpeta htdocs ubicada en xampp
