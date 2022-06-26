@@ -15,6 +15,36 @@ function formulario()
     }
 
     ?>
+     <?php
+
+
+function alerta_usuario($message)
+{
+    echo "<script>alert('$message');</script>";
+}
+
+if (isset($_POST['enviar'])) {
+    if (empty($_POST['usuario']) || empty($_POST['clave'])) {
+        echo "Debe llenar todos los campos";
+    }
+    elseif ($_POST['usuario'] == "test" and $_POST['clave'] == "test") {
+        $_SESSION['usuario'] = $_POST['usuario'];
+        $_SESSION['clave'] = $_POST['clave'];
+        alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
+
+    }
+    elseif ($_POST['usuario'] == "helly" and $_POST['clave'] == "4321") {
+        $_SESSION['usuario'] = $_POST['usuario'];
+        $_SESSION['clave'] = $_POST['clave'];
+        alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
+    }
+    elseif ($_POST['usuario'] == "fercu" and $_POST['clave'] == "1234") {
+        $_SESSION['usuario'] = $_POST['usuario'];
+        $_SESSION['clave'] = $_POST['clave'];
+        alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
+    }
+}
+?>
     <html data-dark>
 
     </html>
