@@ -5,7 +5,7 @@
 Código para el proyecto de Clínica digital
 
 <p align="center">
-  <img src="resources/imgs/horoscopo-dia.png" alt="Tu horoscopo">
+  <img src="resources/imgs/clinica-app.png" alt="Tu Clínica">
 </p>
 
 </td></tr></table>

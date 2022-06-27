@@ -65,7 +65,7 @@ if (isset($_POST['enviar'])) {
     </figure>
 </a>
 
-<a href="/">
+<a href="../glucosaSangre/index.php">
     <figure class="card">
       <img src="../../imgs/glucosa.png" alt="glucosa">
       <figcaption>Glucosa</figcaption>

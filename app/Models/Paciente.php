@@ -233,43 +233,35 @@ class Paciente
         }
     }
 
-    public function calcularGlucosa($lHorario, $lGlucometro)
-    {
-        // TODO Buscar fórmula de Glucosa
+    public function calcularGlucosa($lGlucometro, $lHorario) {
         if ($lHorario === "Ayunas") {
-
-            if ($lGlucometro <= 100) {
-                $resp = "Sin Diabetes";
-                $this->setGlucosa($resp);
+            if ($lGlucometro >= 70 && $lGlucometro <= 100) {
+                $this->setGlucosa("Sin Diabetes");
             }
 
-            if ($lGlucometro <= 125) {
-                $resp = "Pre Diabetes";
-                $this->setGlucosa($resp);
+            if ($lGlucometro > 100 && $lGlucometro <= 125) {
+                $this->setGlucosa("Pre Diabetes");
             }
 
             if ($lGlucometro >= 126) {
-                $resp = "Diabetes";
-                $this->setGlucosa($resp);
-            }
-        } else if ($lHorario === "Posprandial") {
-            if ($lGlucometro <= 140) {
-                $resp = "Sin Diabetes";
-                $this->setGlucosa($resp);
+                $this->setGlucosa("Diabetes");
             }
 
-            if ($lGlucometro <= 199) {
-                $resp = "Pre Diabetes";
-                $this->setGlucosa($resp);
+        } else if ($lHorario === "Posprandial") {
+            if ($lGlucometro <= 140) {
+                $this->setGlucosa("Sin Diabetes");
+            }
+
+            if ($lGlucometro > 140 && $lGlucometro <= 199) {
+                $this->setGlucosa("Pre Diabetes");
             }
 
             if ($lGlucometro >= 200) {
-                $resp = "Diabetes";
-                $this->setGlucosa($resp);
+                $this->setGlucosa("Diabetes");
             }
 
         }
-    }
+}
 
 // función: https://www.clikisalud.net/diabetes/como-puedo-saber-si-padezco-diabetes/#:~:text=Para%20ambos%20tipos%20de%20diabetes,6.5%25%20en%20adelante%3B%20prueba%20de
 
