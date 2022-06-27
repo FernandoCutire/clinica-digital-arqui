@@ -28,7 +28,8 @@ function encabezado()
                 <a href="https://doc.clickup.com/31045686/d/h/xke1p-283/8ec2db1806fa6a4" target="_blank">Más información</a>
                 <a href="https://github.com/FernandoCutire/clinica-digital-arqui/tree/master" target="_blank">Acerca de</a>
                 <a href="../inicioSesion/inicio-sesion.php">Cerrar Sesion</a>
-
+                <button class="scroll-top-btn hidden">&#11014;</button>
+                <button class="dark-mode-btn">🌙</button>
               
 
             </nav>

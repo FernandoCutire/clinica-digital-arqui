@@ -2,23 +2,23 @@
 include('../includes/header.php');
 encabezado();
 ?>
-
-<section class="section">
+<html  data-dark>
+<section class="section" data-dark>
 <div class="anuncio">
     <h1>Calculadora Índice de Masa Corporal (IMC)</h1>
     <p>Coloca tu peso en kg y altura en metros</p>
 </div>
-
+ <img  src="../../imgs/imc-menu.png" alt="imc">
 
 <div class="formulario" data-dark>
     <h2 class="title-form">Conoce tu IMC </h2>
     <form method="POST" action="../resultados/resultadosIMC.php">
 
         <label for="peso">Peso</label>
-        <input type="number" name="peso" id="peso" placeholder="Peso en kg" step=".01">
+        <input class="input-forms"type="number" name="peso" id="peso" placeholder="Peso en kg" step=".01">
 
         <label for="estatura">Altura</label>
-        <input type="number" name="estatura" id="estatura" placeholder="Altura en metros" step=".01">
+        <input class="input-forms" type="number" name="estatura" id="estatura" placeholder="Altura en metros" step=".01">
 
         <br>
         <br>
@@ -38,3 +38,7 @@ encabezado();
 
 
 </div>
+<?php
+include('../includes/pie_pag.php');
+pie();
+?>

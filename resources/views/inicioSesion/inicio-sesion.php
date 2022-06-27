@@ -47,7 +47,8 @@
         </form>
     </div>
 </section>
-
+<button class="scroll-top-btn hidden">&#11014;</button>
+                <button class="dark-mode-btn">🌙</button>
 <footer class="footer">
     <p>Creado por: <b>Fernando Cutire & Hellynger St Rose</b></p>
     <p>Arquitectura y Desarrollo de Aplicaciones Web</p>

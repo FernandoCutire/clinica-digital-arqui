@@ -2,28 +2,32 @@
 include('../includes/header.php');
 encabezado();
 ?>
+<html data-dark>
 
-<section class="section">
-<div class="anuncio">
+
+<section class="section" data-dark>
+<div class="anuncio" data-dark>
     <h1>Calculadora Glucosa en la sangre</h1>
     <p>Coloca la lectura tu glucómetro (mg/dL) e indica si lo tomaste en Ayunas o posterior a las comidas (posprandial)</p>
 </div>
+<img style="width: 250px;" src="../../imgs/glucosa.png" alt="imc">
 
 
 <div class="formulario" data-dark>
     <h2 class="title-form">Conoce tu riesgo de tener diabetes </h2>
+
     <form method="POST" action="../resultados/resultadosDiabetes.php">
 
         <label for="glucometro">Lectura de Glucómetro</label>
-        <input type="number" name="glucometro" id="glucometro" placeholder="Lectura de Glucómetro (mg/dL)" step=".01">
+        <input class="input-forms" style="width: 250px;" type="number" name="glucometro" id="glucometro" placeholder="Lectura de Glucómetro (mg/dL)" step=".01">
 
         <br>
         <br>
 
         <label for="horario">¿Cuándo te tomaste la lectura?</label>
-        <select name="horario" id="horario">
-            <option value="Ayunas">Ayunas</option>
-            <option value="Posprandial">Posprandial (posterior a las comidas)</option>
+        <select input-forms name="horario" id="horario">
+            <option class="input-forms" value="Ayunas">Ayunas</option>
+            <option class="input-forms" value="Posprandial">Posprandial (posterior a las comidas)</option>
         </select>
 
         <br>
@@ -43,3 +47,8 @@ encabezado();
 
 
 </div>
+</html>
+<?php
+include('../includes/pie_pag.php');
+pie();
+?>
