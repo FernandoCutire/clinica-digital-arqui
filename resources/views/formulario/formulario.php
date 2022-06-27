@@ -41,7 +41,7 @@ if (isset($_POST['enviar'])) {
     }
 }
 ?>
-    <html data-dark>
+    <html lang="es" data-dark>
 
     </html>
     <div class="anuncio">
@@ -71,7 +71,7 @@ if (isset($_POST['enviar'])) {
       <figcaption>Glucosa</figcaption>
     </figure>
 </a>
-    <a href="/">
+    <a href="../presionArterial/index.php">
     <figure class="card">
       <img src="../../imgs/presion.png" alt="presion">
       <figcaption>Presión Arterial</figcaption>
