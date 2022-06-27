@@ -36,5 +36,3 @@ encabezado();
     </section>
     <script src="../../js/index.js" type="module"></script>
 
-
-</div>

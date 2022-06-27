@@ -9,7 +9,7 @@ class Paciente
     private $lecturaGlucometro;
     private $lecturaHorario;
     private $presionSistolica;
-    private $presionDistolica;
+    private $presionDiastolica;
     private $imc;
     private $imcEstado;
     private $glucosa;
@@ -131,17 +131,17 @@ class Paciente
     /**
      * @return mixed
      */
-    public function getPresionDistolica()
+    public function getPresionDiastolica()
     {
-        return $this->presionDistolica;
+        return $this->presionDiastolica;
     }
 
     /**
-     * @param mixed $presionDistolica
+     * @param mixed $presionDiastolica
      */
-    public function setPresionDistolica($presionDistolica)
+    public function setPresionDiastolica($presionDiastolica)
     {
-        $this->presionDistolica = $presionDistolica;
+        $this->presionDiastolica = $presionDiastolica;
     }
 
     /**
@@ -265,24 +265,21 @@ class Paciente
 
 // función: https://www.clikisalud.net/diabetes/como-puedo-saber-si-padezco-diabetes/#:~:text=Para%20ambos%20tipos%20de%20diabetes,6.5%25%20en%20adelante%3B%20prueba%20de
 
-    public function calcularPresionArterial($pSistolica, $pDistolica)
+    public function calcularPresionArterial($pSistolica, $pDiastolica)
     {
-        // TODO Buscar fórmula de Presion Arterial
-        $this->presionArterial = $this->presionSistolica + $this->presionDistolica;
-
-        if ($pSistolica < 120 && $pDistolica < 80) {
+        if ($pSistolica < 120 && $pDiastolica < 80) {
             $resp = "Normal";
             $this->setPresionArterial($resp);
-        } else if ($pSistolica <= 129 && $pDistolica < 80) {
+        } else if (  ($pSistolica >= 120 && $pSistolica <= 129)  && $pDiastolica < 80) {
             $resp = "Elevada";
             $this->setPresionArterial($resp);
-        } else if ($pSistolica <= 139 && $pDistolica <= 89) {
+        } else if (($pSistolica >= 130 && $pSistolica <= 139) && ($pDiastolica >= 80 && $pDiastolica <= 89)) {
             $resp = "Presión Arterial Alta Nivel 1";
             $this->setPresionArterial($resp);
-        } else if ($pSistolica >= 140 && $pDistolica >= 90) {
+        } else if (($pSistolica >= 140 && $pSistolica <= 180) || ($pDiastolica >= 90 && $pDiastolica <= 120)) {
             $resp = "Presión Arterial Alta Nivel 2";
             $this->setPresionArterial($resp);
-        } else if ($pSistolica >= 180 && $pDistolica >= 120) {
+        } else if ($pSistolica >= 180 || $pDiastolica >= 120) {
             $resp = "Crisis de Hipertensión (Consulte a su médico de inmediato)";
             $this->setPresionArterial($resp);
         }
