@@ -14,9 +14,9 @@ $paciente->setLecturaGlucometro($_POST['glucometro']);
 $paciente->setLecturaHorario($_POST['horario']);
 $paciente->calcularGlucosa($paciente->getLecturaGlucometro(), $paciente->getLecturaHorario());
 ?>
-
-    <section class="section_resultado">
-        <h2 class="title_result">Resultado Lectura de Glucómetro: Riesgo de Diabetes</h2>
+<html data-dark>
+    <section class="section_resultado" data-dark>
+        <h2 class="title_result" >Resultado Lectura de Glucómetro: Riesgo de Diabetes</h2>
 
         <div class="respuestas" data-dark><h2>Según lo indicado su estado es:
                 <span class="persona" data-dark>
@@ -28,17 +28,18 @@ $paciente->calcularGlucosa($paciente->getLecturaGlucometro(), $paciente->getLect
 
         <div class="respuestas" data-dark><h2>Su glucómetro marcó:
                 <span class="persona" data-dark>
-                    <?php echo $paciente->getLecturaGlucometro() . " ", " mg/dL" ?>
+                    <?php echo $paciente->getLecturaGlucometro() . " ", " mg/dL 🩸" ?>
                 </span>
             </h2>
         </div>
 
         <div class="respuestas" data-dark><h2>Se midió en un horario:
                 <span class="persona" data-dark>
-                    <?php echo $paciente->getLecturaHorario() . " ", " " ?>
+                    <?php echo $paciente->getLecturaHorario() . " ", " ⏰" ?>
                 </span>
             </h2>
         </div>
+        <a class="btn-volver" href="../../views/glucosaSangre/index.php">Regresar al formulario</a>
 
     </section>
 

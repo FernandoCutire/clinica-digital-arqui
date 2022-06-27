@@ -40,6 +40,7 @@ $paciente->calcularPresionArterial($paciente->getPresionSistolica(), $paciente->
             </h2>
         </div>
 
+        <a class="btn-volver" href="../../views/presionArterial/index.php">Regresar al formulario</a>
 
     </section>
 

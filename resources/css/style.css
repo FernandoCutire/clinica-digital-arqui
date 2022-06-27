@@ -344,13 +344,13 @@ tr,td{
 }
 .respuestas{
 padding: 1rem;
-  color: #941A38;
+  color: var(--third-color);
 }
 
 .title_result{
   font-size: 1.4rem;
   padding: 2rem;
-  background-color:  #941A38;
+  background-color:  var(--third-color);
   color: #fff;
   border-radius: 20px;
 }

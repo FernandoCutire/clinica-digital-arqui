@@ -8,20 +8,21 @@ encabezado();
     <p>Coloca la lectura tu Presión Sistólica (mg Hg) y Presión Diastólica (mg Hg)</p>
 </div>
 
+<img style="width: 250px;" src="../../imgs/presion.png" alt="imc">
 
 <div class="formulario" data-dark>
     <h2 class="title-form">Conoce tu riesgo de presión alta</h2>
     <form method="POST" action="../resultados/resultadosPresiónArterial.php">
 
         <label for="pSistolica">Lectura de Presión Sistólica (mg/Hg)</label>
-        <input type="number" name="pSistolica" id="pSistolica" placeholder="Presión Sistólica (mg/Hg)" step=".01">
+        <input class="input-forms" type="number" name="pSistolica" id="pSistolica" placeholder="Presión Sistólica (mg/Hg)" step=".01">
 
         <br>
         <br>
 
 
         <label for="pDiastolica">Lectura de Presión Diastólica (mg/Hg)</label>
-        <input type="number" name="pDiastolica" id="pDiastolica" placeholder="Presión Diastólica (mg/Hg)" step=".01">
+        <input class="input-forms" type="number" name="pDiastolica" id="pDiastolica" placeholder="Presión Diastólica (mg/Hg)" step=".01">
 
         <br>
         <br>
@@ -37,5 +38,8 @@ encabezado();
 
     </section>
     <script src="../../js/index.js" type="module"></script>
-
+    <?php
+include('../includes/pie_pag.php');
+pie();
+?>
 

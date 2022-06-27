@@ -36,12 +36,9 @@ encabezado();
     </section>
     <script src="../../js/index.js" type="module"></script>
 
-<<<<<<< HEAD
 
 </div>
 <?php
 include('../includes/pie_pag.php');
 pie();
 ?>
-=======
->>>>>>> 022da8ccc535369e46e4c3a4d6d6642627ce26cf

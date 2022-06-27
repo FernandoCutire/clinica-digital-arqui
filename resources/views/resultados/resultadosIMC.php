@@ -15,13 +15,13 @@ $paciente->setEstatura($_POST['estatura']);
 $paciente->calcularIMC($paciente->getPeso(), $paciente->getEstatura());
 $paciente->calcularIMCEstado();
 ?>
-
-    <section class="section_resultado">
+<html data-dark>
+    <section class="section_resultado" data-dark>
         <h2 class="title_result">Resultado Índice de Masa Corporal IMC</h2>
 
         <div class="respuestas" data-dark><h2>Tu IMC es:
                 <span class="persona" data-dark>
-                    <?php echo $paciente->getImc() . " ", " " ?>
+                    <?php echo $paciente->getImc() . " ", " ⏲️" ?>
                 </span>
             </h2>
         </div>
@@ -32,6 +32,7 @@ $paciente->calcularIMCEstado();
                 </span>
             </h2>
         </div>
+        <a class="btn-volver" href="../../views/IMC/index.php">Regresar al formulario</a>
 
     </section>
 

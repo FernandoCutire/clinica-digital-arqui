@@ -214,50 +214,57 @@ class Paciente
 
     public function calcularIMC($peso, $estatura)
     {
-        $imc = $peso / ($estatura**2);
-        $this->setImc($imc);
+        if($peso>=1){
+            $imc = $peso / ($estatura**2);
+            $this->setImc($imc);
+        }else{
+            $imc="Error no se puede dividir entre cero. Intente de nuevo";
+            $this->setImc($imc);
+
+        }
+     
     }
 
     public function calcularIMCEstado() {
         $imc = $this->getImc();
         if ($imc < 18.5) {
-            $this->setImcEstado("Peso bajo");
+            $this->setImcEstado("Peso bajo 🔵");
         } elseif ($imc >= 18.5 && $imc <= 24.9) {
-            $this->setImcEstado("Peso normal");
+            $this->setImcEstado("Peso normal 🟢");
         } elseif ($imc >= 25 && $imc <= 29.9) {
-            $this->setImcEstado("Sobrepeso");
+            $this->setImcEstado("Sobrepeso 🟡");
         } elseif ($imc >= 30 && $imc <= 39.9) {
-            $this->setImcEstado("Obesidad ");
+            $this->setImcEstado("Obesidad 🟠");
         } elseif ($imc >= 40) {
-            $this->setImcEstado("Obesidad extrema");
+            $this->setImcEstado("Obesidad extrema 🔴");
         }
     }
 
     public function calcularGlucosa($lGlucometro, $lHorario) {
         if ($lHorario === "Ayunas") {
             if ($lGlucometro >= 70 && $lGlucometro <= 100) {
-                $this->setGlucosa("Sin Diabetes");
+                $this->setGlucosa("Sin Diabetes 🟢");
             }
 
             if ($lGlucometro > 100 && $lGlucometro <= 125) {
-                $this->setGlucosa("Pre Diabetes");
+                $this->setGlucosa("Pre Diabetes 🟡");
             }
 
             if ($lGlucometro >= 126) {
-                $this->setGlucosa("Diabetes");
+                $this->setGlucosa("Diabetes 🔴");
             }
 
         } else if ($lHorario === "Posprandial") {
             if ($lGlucometro <= 140) {
-                $this->setGlucosa("Sin Diabetes");
+                $this->setGlucosa("Sin Diabetes 🟢");
             }
 
             if ($lGlucometro > 140 && $lGlucometro <= 199) {
-                $this->setGlucosa("Pre Diabetes");
+                $this->setGlucosa("Pre Diabetes 🟡");
             }
 
             if ($lGlucometro >= 200) {
-                $this->setGlucosa("Diabetes");
+                $this->setGlucosa("Diabetes 🔴");
             }
 
         }
@@ -268,19 +275,19 @@ class Paciente
     public function calcularPresionArterial($pSistolica, $pDiastolica)
     {
         if ($pSistolica < 120 && $pDiastolica < 80) {
-            $resp = "Normal";
+            $resp = "Normal 🔵";
             $this->setPresionArterial($resp);
         } else if (  ($pSistolica >= 120 && $pSistolica <= 129)  && $pDiastolica < 80) {
-            $resp = "Elevada";
+            $resp = "Elevada 🟢";
             $this->setPresionArterial($resp);
         } else if (($pSistolica >= 130 && $pSistolica <= 139) && ($pDiastolica >= 80 && $pDiastolica <= 89)) {
-            $resp = "Presión Arterial Alta Nivel 1";
+            $resp = "Presión Arterial Alta Nivel 1 🟡";
             $this->setPresionArterial($resp);
         } else if (($pSistolica >= 140 && $pSistolica <= 180) || ($pDiastolica >= 90 && $pDiastolica <= 120)) {
-            $resp = "Presión Arterial Alta Nivel 2";
+            $resp = "Presión Arterial Alta Nivel 2 🟠";
             $this->setPresionArterial($resp);
         } else if ($pSistolica >= 180 || $pDiastolica >= 120) {
-            $resp = "Crisis de Hipertensión (Consulte a su médico de inmediato)";
+            $resp = "Crisis de Hipertensión (Consulte a su médico de inmediato) 🔴";
             $this->setPresionArterial($resp);
         }
 
