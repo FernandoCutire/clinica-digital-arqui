@@ -14,8 +14,8 @@ $paciente->setPresionSistolica($_POST['pSistolica']);
 $paciente->setPresionDiastolica($_POST['pDiastolica']);
 $paciente->calcularPresionArterial($paciente->getPresionSistolica(), $paciente->getPresionDiastolica());
 ?>
-
-    <section class="section_resultado">
+<html  data-dark>
+    <section class="section_resultado"  data-dark>
         <h2 class="title_result">Resultado Categoría de Presión Arterial</h2>
 
         <div class="respuestas" data-dark><h2>Según lo indicado su estado es:

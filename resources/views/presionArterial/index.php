@@ -2,6 +2,7 @@
 include('../includes/header.php');
 encabezado();
 ?>
+<html  data-dark>>
 <section class="section">
 <div class="anuncio">
     <h1>Presión Arterial</h1>
