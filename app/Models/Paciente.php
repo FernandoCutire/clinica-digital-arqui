@@ -11,6 +11,7 @@ class Paciente
     private $presionSistolica;
     private $presionDistolica;
     private $imc;
+    private $imcEstado;
     private $glucosa;
     private $presionArterial;
 
@@ -191,46 +192,78 @@ class Paciente
         $this->presionArterial = $presionArterial;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getImcEstado()
+    {
+        return $this->imcEstado;
+    }
+
+    /**
+     * @param mixed $imcEstado
+     */
+    public function setImcEstado($imcEstado)
+    {
+        $this->imcEstado = $imcEstado;
+    }
+
+
 
     // Aqui deberian ir 3 funciones
 
-    public function calcularIMC()
+    public function calcularIMC($peso, $estatura)
     {
-        $imc = $this->peso / ($this->estatura * $this->estatura);
+        $imc = $peso / ($estatura**2);
         $this->setImc($imc);
     }
 
-    public function calcularGlucosa($lHorario, $lHorario)
+    public function calcularIMCEstado() {
+        $imc = $this->getImc();
+        if ($imc < 18.5) {
+            $this->setImcEstado("Peso bajo");
+        } elseif ($imc >= 18.5 && $imc <= 24.9) {
+            $this->setImcEstado("Peso normal");
+        } elseif ($imc >= 25 && $imc <= 29.9) {
+            $this->setImcEstado("Sobrepeso");
+        } elseif ($imc >= 30 && $imc <= 39.9) {
+            $this->setImcEstado("Obesidad ");
+        } elseif ($imc >= 40) {
+            $this->setImcEstado("Obesidad extrema");
+        }
+    }
+
+    public function calcularGlucosa($lHorario, $lGlucometro)
     {
         // TODO Buscar fórmula de Glucosa
         if ($lHorario === "Ayunas") {
 
-            if ($lHorario <= 100) {
+            if ($lGlucometro <= 100) {
                 $resp = "Sin Diabetes";
                 $this->setGlucosa($resp);
             }
 
-            if ($lHorario <= 125) {
+            if ($lGlucometro <= 125) {
                 $resp = "Pre Diabetes";
                 $this->setGlucosa($resp);
             }
 
-            if ($lHorario >= 126) {
+            if ($lGlucometro >= 126) {
                 $resp = "Diabetes";
                 $this->setGlucosa($resp);
             }
-        } else if ($lHorario == "Posprandial") {
-            if ($lHorario <= 140) {
+        } else if ($lHorario === "Posprandial") {
+            if ($lGlucometro <= 140) {
                 $resp = "Sin Diabetes";
                 $this->setGlucosa($resp);
             }
 
-            if ($lHorario <= 199) {
+            if ($lGlucometro <= 199) {
                 $resp = "Pre Diabetes";
                 $this->setGlucosa($resp);
             }
 
-            if ($lHorario >= 200) {
+            if ($lGlucometro >= 200) {
                 $resp = "Diabetes";
                 $this->setGlucosa($resp);
             }
@@ -263,5 +296,6 @@ class Paciente
         }
 
     }
+
 
 }

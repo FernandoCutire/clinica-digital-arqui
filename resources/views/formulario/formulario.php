@@ -55,10 +55,10 @@ if (isset($_POST['enviar'])) {
 
         <div class="formulario" data-dark><br><br>
             <h2 class="title-form" data-dark>Escoja su opcion de preferencia</h2>
-            <form method="POST" action="../resultados/resultados.php"><br>
+            <form method="POST" action="../resultados/resultadosIMC.php"><br>
 
 <article class="menu-opciones">
- <a href="/">
+ <a href="../IMC/index.php">
     <figure class="card">
      <img src="../../imgs/imc-menu.png" alt="imc">
       <figcaption>IMC</figcaption>
