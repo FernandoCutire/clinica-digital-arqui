@@ -55,10 +55,9 @@ if (isset($_POST['enviar'])) {
 }
 ?>
     <html lang="es" data-dark>
-    <div class="title_result center">
- AQUI VA EL NOMBRE CON COOKIE
-    </div>
-    </html>
+<div class="title-result">
+
+</div>
     <div class="anuncio">
         <img id="personas-salud" src="../../imgs/personas-salud.png" alt="future">
         <p>🩸 <i>Conoceras tu presión Arterial</i></p>
