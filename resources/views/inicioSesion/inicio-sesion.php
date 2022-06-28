@@ -14,12 +14,12 @@
     <section class="container">
 
         <div class="logo">
-            <a href="../inicio/inicio.php">
+            <a href="#">
                 <img class="horoscopo" src="../../imgs/salud.png" alt="zodiac"><span> </span></a>
             <h1>Salud Digital</h1>
         </div>
         <nav class="menu">
-            <a href="../inicio/inicio.php">Inicio</a>
+            <a href="#">Inicio</a>
             <a href="https://doc.clickup.com/31045686/d/h/xke1p-283/8ec2db1806fa6a4" target="_blank">Más Información</a>
             <a href="https://github.com/FernandoCutire/zodiaco-app/tree/master" target="_blank">Acerca de</a>
            
@@ -34,10 +34,10 @@
         <h2 class="title-form" data-dark>Iniciar Sesion</h2>
         <form name="login" method="post" action="../../views/inicio/inicio.php"><br>
             <label for="usuario">Usuario: </label>
-            <input name="usuario" type="text" id="usuario"> <br><br>
+            <input name="usuario" type="text" id="usuario" required> <br><br>
 
             <label for="clave">Contraseña: </label>
-            <input name="clave" type="password" id="clave"><br><br>
+            <input name="clave" type="password" id="clave" required><br><br>
 
             <div class="center">
                 <a>

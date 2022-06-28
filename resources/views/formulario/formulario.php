@@ -12,37 +12,52 @@ function formulario()
     }
 
     ?>
-     <?php
+    <?php
 
 
-function alerta_usuario($message){
+function alerta_usuario($message)
+{
     echo "<script>alert('$message');</script>";
 }
 
 if (isset($_POST['enviar'])) {
     if (empty($_POST['usuario']) || empty($_POST['clave'])) {
         echo "Debe llenar todos los campos";
+        
     }
     elseif ($_POST['usuario'] == "test" and $_POST['clave'] == "test") {
+        session_start();
         $_SESSION['usuario'] = $_POST['usuario'];
         $_SESSION['clave'] = $_POST['clave'];
         alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
+
 
     }
     elseif ($_POST['usuario'] == "helly" and $_POST['clave'] == "4321") {
+        session_start();
         $_SESSION['usuario'] = $_POST['usuario'];
         $_SESSION['clave'] = $_POST['clave'];
         alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
+
     }
     elseif ($_POST['usuario'] == "fercu" and $_POST['clave'] == "1234") {
+        session_start();
         $_SESSION['usuario'] = $_POST['usuario'];
         $_SESSION['clave'] = $_POST['clave'];
         alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
+    }else{
+        
+        
+        alerta_usuario("Error en los datos");
+        header("Location:  ../../views/inicioSesion/inicio-sesion.php");
     }
+
 }
 ?>
     <html lang="es" data-dark>
-
+    <div class="title_result center">
+ AQUI VA EL NOMBRE CON COOKIE
+    </div>
     </html>
     <div class="anuncio">
         <img id="personas-salud" src="../../imgs/personas-salud.png" alt="future">
@@ -50,6 +65,7 @@ if (isset($_POST['enviar'])) {
         <p>🍏 <i>Calcula tu IMC</i></p>
         <p>💉<i>Calcula tu Glucosa</i></p>
     </div>
+
 
     <section class="section" data-dark>
 
