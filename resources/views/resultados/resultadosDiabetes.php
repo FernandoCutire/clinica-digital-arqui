@@ -15,9 +15,16 @@ $paciente->setLecturaHorario($_POST['horario']);
 $paciente->calcularGlucosa($paciente->getLecturaGlucometro(), $paciente->getLecturaHorario());
 ?>
 <html data-dark>
+<div class="title_result" >Hola,  <?php
+        
+        // Setear las cookies
+        setcookie('nombre', "Aurelio");
+        setcookie('apellido', "Jímenez");
+        echo "" .$_COOKIE['nombre'] . " " . $_COOKIE['apellido'] ;
+        ?> Tu Resultado Lectura de Glucómetro es:</div>
     <section class="section_resultado" data-dark>
-        <h2 class="title_result" >Resultado Lectura de Glucómetro: Riesgo de Diabetes</h2>
-
+        
+       
         <div class="respuestas" data-dark><h2>Según lo indicado su estado es:
                 <span class="persona" data-dark>
                     <?php echo $paciente->getGlucosa() . " ", " " ?>

@@ -34,14 +34,14 @@ if (isset($_POST['enviar'])) {
     if (empty($_POST['usuario']) || empty($_POST['clave'])) {
         echo "Debe llenar todos los campos";
     }
-    elseif ($_POST['usuario'] == "test" and $_POST['clave'] == "test") {
+    elseif ($_POST['usuario'] == "test" and $_POST['clave'] == "pass1234") {
         session_start();
         $_SESSION['usuario'] = $_POST['usuario'];
 
         borrarCookieUsuario();
 
-        setcookie('nombre', "Lionel");
-        setcookie('apellido', "Messi");
+        setcookie('nombre', "Aurelio");
+        setcookie('apellido', "Jímenez");
 
         $_SESSION['clave'] = $_POST['clave'];
         alerta_usuario("Has iniciado sesión como " . $_SESSION['usuario']);
@@ -84,7 +84,7 @@ if (isset($_POST['enviar'])) {
     <html lang="es" data-dark>
     <div class="title_result center">
         <?php
-        echo $_COOKIE['nombre'] . " " . $_COOKIE['apellido'] ;
+        echo "Bienvenido " .$_COOKIE['nombre'] . " " . $_COOKIE['apellido'] ;
         ?>
     </div>
     </html>

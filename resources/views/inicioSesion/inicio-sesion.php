@@ -34,7 +34,7 @@
         <h2 class="title-form" data-dark>Iniciar Sesion</h2>
         <form name="login" method="post" action="../../views/inicio/inicio.php"><br>
             <label for="usuario">Usuario: </label>
-            <input name="usuario" type="text" id="usuario" required> <br><br>
+            <input name="usuario" type="text" id="usuario" required placeholder="test"> <br><br>
 
             <label for="clave">Contraseña: </label>
             <input name="clave" type="password" id="clave" required><br><br>
