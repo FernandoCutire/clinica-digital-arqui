@@ -2,8 +2,29 @@
 include('../includes/header.php');
 encabezado();
 ?>
-<html data-dark>
 
+<?php
+
+    if (isset($_COOKIE['contadorGlucosa'])) {
+        setcookie('contadorGlucosa', $_COOKIE['contadorGlucosa'] + 1);
+        $mensaje = "Número de visitas: " . $_COOKIE['contadorGlucosa'];
+    } else {
+        setcookie('contadorGlucosa',1);
+        $mensaje = "Bienvenido a nuestra página web";
+    }
+?>
+
+
+<html data-dark>
+<div class="title_result center">
+        <?php
+        
+        // Setear las cookies
+        setcookie('nombre', "Aurelio");
+        setcookie('apellido', "Jímenez");
+        echo "Bienvenido " .$_COOKIE['nombre'] . " " . $_COOKIE['apellido'] ;
+        ?>
+    </div>
 
 <section class="section" data-dark>
 <div class="anuncio" data-dark>
@@ -40,7 +61,14 @@ encabezado();
         </div>
 
     </form>
+    <br><br>
+            </form>
 
+            <div class="center">
+                <p>
+                    <?php echo $mensaje; ?>
+                </p>
+            </div>
 
     </section>
     <script src="../../js/index.js" type="module"></script>

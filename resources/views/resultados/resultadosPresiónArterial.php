@@ -15,9 +15,16 @@ $paciente->setPresionDiastolica($_POST['pDiastolica']);
 $paciente->calcularPresionArterial($paciente->getPresionSistolica(), $paciente->getPresionDiastolica());
 ?>
 <html  data-dark>
-    <section class="section_resultado"  data-dark>
-        <h2 class="title_result">Resultado Categoría de Presión Arterial</h2>
+<div class="title_result">Hola,  <?php
+        
+        // Setear las cookies
+        setcookie('nombre', "Aurelio");
+        setcookie('apellido', "Jímenez");
+        echo "" .$_COOKIE['nombre'] . " " . $_COOKIE['apellido'] ;
+        ?> Tu Resultado Categoría de Presión Arterial es:</div>
 
+        
+    <section class="section_resultado"  data-dark>
         <div class="respuestas" data-dark><h2>Según lo indicado su estado es:
                 <span class="persona" data-dark>
                     <?php echo $paciente->getPresionArterial() . " ", " " ?>
@@ -33,7 +40,7 @@ $paciente->calcularPresionArterial($paciente->getPresionSistolica(), $paciente->
             </h2>
         </div>
 
-        <div class="respuestas" data-dark><h2>Su presión Diastólica marcó:
+        <div class="respuestas" data-dark><h2> Su presión Diastólica marcó:
                 <span class="persona" data-dark>
                     <?php echo $paciente->getPresionDiastolica() . " ", " mg/Hg" ?>
                 </span>

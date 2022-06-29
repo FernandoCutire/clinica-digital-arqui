@@ -1,4 +1,6 @@
 <?php
 
-setcookie('contador', 1);
+setcookie('contador', 1 );
 header('location: inicio.php');
+?>
+

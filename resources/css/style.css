@@ -5,7 +5,7 @@
   --main-color: #2183b8;
   --black-color: #222;
   --white-font : #fff;
-  --third-color: #002fff;
+  --third-color: #F05D23;
   /*--hover-color: #;*/
 
   --container-width: 1200px;
@@ -348,11 +348,12 @@ padding: 1rem;
 }
 
 .title_result{
+  text-align: center;
   font-size: 1.4rem;
   padding: 2rem;
   background-color:  var(--third-color);
   color: #fff;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 /**FOOTER*/

@@ -3,7 +3,8 @@
 # Clínica Digital
 
 Código para el proyecto de Clínica digital
-
+USUARIO: TEST
+CONTRASEÑA: pass1234
 <p align="center">
   <img src="resources/imgs/clinica-app.png" alt="Tu Clínica">
 </p>
